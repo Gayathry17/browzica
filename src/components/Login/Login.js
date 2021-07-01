@@ -4,7 +4,7 @@ import {useHistory} from 'react-router-dom';
 
 import { AuthContext } from '../../context/AuthContext'
 import { auth, db } from '../../firebase/firebase';
-import { Container } from '@material-ui/core';
+
 
 import './Login.css'
 
@@ -49,10 +49,14 @@ function Login() {
                         <p>This is just a paragraph</p>
                     </div>
                     <div className="login-rightcontainer">
-                        <h1>Browzica</h1>
-                        <p>Welcome to Bookmarks!!</p>
+                        <div>
+                            <h1>Browzica</h1>
+                            <p>Welcome to Bookmarks!!</p>
+                        </div>
                         <button onClick={handleOnClick}>
-                            <img src={googleImage} alt=""/>Sign In with Google</button>
+                            <img src={googleImage} alt=""/>
+                            Sign In with Google
+                        </button>
                     </div>
             </div>
             

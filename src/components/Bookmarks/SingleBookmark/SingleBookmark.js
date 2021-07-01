@@ -2,7 +2,7 @@ import React from 'react'
 
 function SingleBookmark() {
     return (
-        <div>
+        <div className="singleBookmark">
             
         </div>
     )

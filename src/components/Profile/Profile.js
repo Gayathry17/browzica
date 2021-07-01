@@ -17,9 +17,15 @@ function Profile() {
 
 
     return (
-        <div>
-            <h1>{currentUser.displayName}</h1>
-            <img src={currentUser.photoURL} alt="" />
+        <div className="profile">
+            <div className="profileContainer">
+                <div className="profile_header">
+
+                </div>
+                <div className="profile_options">
+                    
+                </div>
+            </div>
         </div>
     )
 }
