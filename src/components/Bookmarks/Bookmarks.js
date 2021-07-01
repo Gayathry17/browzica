@@ -8,7 +8,7 @@ import AddIcon from '@material-ui/icons/Add';
 import { AuthContext } from '../../context/AuthContext'
 import {db} from '../../firebase/firebase';
 
-import './Bookmarks.css'
+import './BookMarks.css'
 
 
 export default function Bookmarks() {

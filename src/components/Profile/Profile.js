@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import firebase from 'firebase';
 
-import { AuthContext } from '../../context/AuthContext'
+import { AuthContext } from '../../context/AuthContext' 
 import { db } from '../../firebase/firebase'
 
 function Profile() {
