@@ -1,0 +1,22 @@
+.singleBookmark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 20px;
+}
+
+.singlebook-img {
+    width: 78px;
+    height: 78px;
+    background-color: #4d4d4d;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+
+}
+
+.singlebook-img > img {
+    width: 60%;
+    height: 60%;
+}

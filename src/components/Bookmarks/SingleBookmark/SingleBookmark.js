@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-function SingleBookmark() {
+import './SingleBookmark.css'
+
+function SingleBookmark({ name, url, id }) {
     return (
         <div className="singleBookmark">
-            
+            <a href={url} target="_blank" rel="noreferrer">
+                <div className="singlebook-img">
+                <img src="" alt="" />
+                </div>
+                <p>{name}</p>
+            </a>
         </div>
     )
 }

@@ -8,12 +8,13 @@ import CloseIcon from '@material-ui/icons/Close';
 import { withStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import AddIcon from '@material-ui/icons/Add';
-
+import SingleBookmark from './SingleBookmark/SingleBookmark';
 
 import { AuthContext } from '../../context/AuthContext'
 import {db} from '../../firebase/firebase';
 
 import './BookMarks.css'
+import { BookmarksRounded } from '@material-ui/icons';
 
 
 const styles = (theme) => ({
@@ -62,13 +63,19 @@ export default function Bookmarks() {
     const [open, setOpen] = useState(false);
     const [name, setName] = useState('');
     const [url, setUrl] = useState('');
+    const [search, setSearch] = useState('')
     const { currentUser }  = useContext(AuthContext)
 
 
 
     useEffect(() => {
         db.collection('users').doc(currentUser.uid).collection('bookmarks').onSnapshot(snapshot => {
-            setBookmarks(snapshot.docs.map(doc => doc.data()))
+            setBookmarks(
+                snapshot.docs.map((doc) => ({
+                    id: doc.id,
+                    data: doc.data(),
+                }))
+            )
         })
     }, [])
 
@@ -95,6 +102,10 @@ export default function Bookmarks() {
 
     }
 
+    // const filteredBookmarks = bookmarks.filter((art) => {
+    //     return art.data[0].bName.toLowerCase().includes(search.toLowerCase())
+    // })
+
     return (
         <div className="bookmark">
             <div className="bookmark-container">
@@ -102,10 +113,11 @@ export default function Bookmarks() {
                 <div className="search-sort">
                     <div className="bookmark-search">
                         <SearchIcon />
-                        <input type="text" placeholder="Search"/>
+                        <input type="text" placeholder="Search" value={search} onChange={(e) => setSearch(e.target.value)}/>
                     </div>
                     <div className="bookmark-sort">
                         <h3>Sort by</h3>
+
                         <div className="sort-btns">
                             <button className="mostVisisted-btn">Most Visited</button>
                             <button className="alphabetical-btn">Alphabetical Order</button>
@@ -114,6 +126,15 @@ export default function Bookmarks() {
                 </div>
                 
                 <div className="bookmark-body">
+                    {
+                        bookmarks && bookmarks.map(bookmark => (
+                            <SingleBookmark 
+                                name={bookmark.data.bName}
+                                url={bookmark.data.bUrl}
+                            />
+                        ))
+                    }
+
                     <Button onClick={handleOpen}>
                         <AddIcon/>
                         Add

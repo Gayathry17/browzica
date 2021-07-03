@@ -51,17 +51,14 @@
 }
 
 
-.bookmark-dialog {
-    display: flex !important;
-    flex-direction: column;
-    padding: 4rem;
+.bookmark-body {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-.bookmark .bookmark-dialog > .MuiDialog-paperScrollPaper {
-    display: flex;
-    /* max-height: calc(100% - 64px); */
-    flex-direction: column;
-    width: 300px;
-    height: 200px;
-    padding: 2rem;
+.bookmark-body > button{
+    margin-left: 20px;
 }
