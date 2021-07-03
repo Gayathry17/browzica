@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext} from 'react'; // eslint-disable-next-line
 import firebase from 'firebase';
 
-import { AuthContext } from '../../context/AuthContext' 
+import { AuthContext } from '../../context/AuthContext'  // eslint-disable-next-line
 import { db } from '../../firebase/firebase'
 
 function Profile() {
@@ -12,7 +12,7 @@ function Profile() {
     //         setUsers(snapshot.docs.map(doc => doc.data()))
     //     })
     // }, [])
-
+ // eslint-disable-next-line
     const { currentUser } = useContext(AuthContext)
 
 
