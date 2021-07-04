@@ -1,0 +1,34 @@
+.profile {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile > h1 {
+
+}
+
+.profileContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+    padding: 2rem;
+}
+
+.profile_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-name, .profile-email {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
