@@ -1,6 +1,6 @@
 import React, {useState,useContext,useEffect} from 'react';
 import firebase from 'firebase';
-import { Button, IconButton, Dialog, Typography } from '@material-ui/core';
+import { Button, IconButton, Dialog, Typography, Grid } from '@material-ui/core';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
 import MuiDialogContent from '@material-ui/core/DialogContent';
 import MuiDialogActions from '@material-ui/core/DialogActions';
@@ -8,13 +8,14 @@ import CloseIcon from '@material-ui/icons/Close';
 import { withStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import AddIcon from '@material-ui/icons/Add';
+
 import SingleBookmark from './SingleBookmark/SingleBookmark';
 
 import { AuthContext } from '../../context/AuthContext'
-import {db} from '../../firebase/firebase';
+import { db } from '../../firebase/firebase';
 
 import './BookMarks.css'
-import { BookmarksRounded } from '@material-ui/icons';
+
 
 
 const styles = (theme) => ({
@@ -59,6 +60,7 @@ const DialogActions = withStyles((theme) => ({
 
 
 export default function Bookmarks() {
+    const [sortId, setSortId] = useState(0)
     const [bookmarks, setBookmarks] = useState([]);
     const [open, setOpen] = useState(false);
     const [name, setName] = useState('');
@@ -69,7 +71,31 @@ export default function Bookmarks() {
 
 
     useEffect(() => {
-        db.collection('users').doc(currentUser.uid).collection('bookmarks').onSnapshot(snapshot => {
+        if(sortId === 0) {
+            db.collection('users').doc(currentUser.uid)
+                .collection('bookmarks').orderBy('createdAt', 'asc').onSnapshot(snapshot => {
+                setBookmarks(
+                    snapshot.docs.map((doc) => ({
+                        id: doc.id,
+                        data: doc.data(),
+                    }))
+                )
+            })
+        }
+        else if (sortId === 1) {
+            db.collection('users').doc(currentUser.uid)
+                .collection('bookmarks').orderBy('count', 'desc').onSnapshot(snapshot => {
+                setBookmarks(
+                    snapshot.docs.map((doc) => ({
+                        id: doc.id,
+                        data: doc.data(),
+                    }))
+                )
+            })
+        }
+        else if (sortId === 2) {
+            db.collection('users').doc(currentUser.uid)
+            .collection('bookmarks').orderBy('bName').onSnapshot(snapshot => {
             setBookmarks(
                 snapshot.docs.map((doc) => ({
                     id: doc.id,
@@ -77,9 +103,9 @@ export default function Bookmarks() {
                 }))
             )
         })
-    }, [])
+        }
+    }, [currentUser.uid, sortId])
 
-    console.log(bookmarks)
 
     const handleOpen = () => {
         setOpen(true);
@@ -95,16 +121,35 @@ export default function Bookmarks() {
                 bName: name,
                 bUrl: url,
                 createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-                count:0
+                count: 0
             })
 
         }
 
     }
 
-    // const filteredBookmarks = bookmarks.filter((art) => {
-    //     return art.data[0].bName.toLowerCase().includes(search.toLowerCase())
-    // })
+    const filteredBookmarks = bookmarks.filter((art) => {
+        return art.data.bName.toLowerCase().includes(search.toLowerCase())
+    })
+
+    const handleMostVisited = () => {
+        if(sortId === 1) {
+            setSortId(0)
+        }
+        else {
+            setSortId(1)
+        }
+    }
+
+    const handleAlphabetical = () => {
+        if(sortId === 2) {
+            setSortId(0)
+        }
+        else {
+            setSortId(2)
+        }
+    }
+
 
     return (
         <div className="bookmark">
@@ -119,26 +164,32 @@ export default function Bookmarks() {
                         <h3>Sort by</h3>
 
                         <div className="sort-btns">
-                            <button className="mostVisisted-btn">Most Visited</button>
-                            <button className="alphabetical-btn">Alphabetical Order</button>
+                            <button onClick={handleMostVisited} className="mostVisisted-btn" style={{ boxShadow: sortId === 1 ? '5px 5px 10px #000000a0, -5px -5px 10px #ffffff40' : 'none'}}>Most Visited</button>
+                            <button onClick={handleAlphabetical} className="alphabetical-btn" style={{ boxShadow: sortId === 2 ? '5px 5px 10px #000000a0, -5px -5px 10px #ffffff40' : 'none'}}>Alphabetical</button>
                         </div>
                     </div>
                 </div>
                 
                 <div className="bookmark-body">
-                    {
-                        bookmarks && bookmarks.map(bookmark => (
-                            <SingleBookmark 
-                                name={bookmark.data.bName}
-                                url={bookmark.data.bUrl}
-                            />
-                        ))
-                    }
-
-                    <Button onClick={handleOpen}>
-                        <AddIcon/>
-                        Add
-                    </Button>
+                    <Grid container>
+                        <Button onClick={handleOpen}>
+                            <AddIcon/>
+                            Add
+                        </Button>
+                        
+                        {
+                            filteredBookmarks && filteredBookmarks.map(bookmark => (
+                                <SingleBookmark 
+                                    name={bookmark.data.bName}
+                                    url={bookmark.data.bUrl}
+                                    key={bookmark.id}
+                                    id={bookmark.id}
+                                    uid={currentUser.uid}
+                                    count={bookmark.data.count}
+                                />
+                            ))
+                        }
+                    </Grid>
                 </div>
             </div>
 
