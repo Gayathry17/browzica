@@ -85,3 +85,12 @@
 .bookmark-body > button{
     margin-left: 20px;
 }
+
+.name-label {
+    padding: 1rem;
+}
+
+
+.url-label {
+    padding-left: 1rem;
+}

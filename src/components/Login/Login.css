@@ -45,11 +45,11 @@
     height: 100%;
     width: 100%;
     flex: 0.5;
-    padding: 0 5rem;
+    padding: 0 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .login-rightcontainer > h1 {

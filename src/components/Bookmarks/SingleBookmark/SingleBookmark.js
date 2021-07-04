@@ -3,6 +3,8 @@ import firebase from 'firebase'
 
 import { db } from '../../../firebase/firebase';
 
+import deleteImg from '../../../assets/images/svg/delete.svg'
+
 import './SingleBookmark.css'
 
 function SingleBookmark({ name, url, id, uid, count }) {
@@ -26,13 +28,17 @@ function SingleBookmark({ name, url, id, uid, count }) {
 
     return (
         <div className="singleBookmark">
-            <a onClick={updateVisitCount} href={url} target="_blank" rel="noreferrer" className="singleBookmarkContainer">
+            <a onClick={updateVisitCount}  href={url} target="_blank" rel="noreferrer" className="singleBookmarkContainer">
                 <div className="singlebook-img">
                     <h1>{firstLetter(name)}</h1>
+                    <div onClick={deleteBookmark} className="delete_icon">
+                        <img src={deleteImg} alt=""/>
+                    </div>
                 </div>
                 <p>{name}</p>
             </a>
-            <button onClick={deleteBookmark}>{count}</button> 
+           
+            
         </div>
     )
 }

@@ -1,7 +1,7 @@
-import React, { useContext} from 'react'; // eslint-disable-next-line
+import React, { useContext} from 'react'; 
 import firebase from 'firebase';
 
-import { AuthContext } from '../../context/AuthContext'  // eslint-disable-next-line
+import { AuthContext } from '../../context/AuthContext'  
 import { db } from '../../firebase/firebase'
 
 function Profile() {
