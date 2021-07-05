@@ -42,16 +42,16 @@
 
 
 
-.singlebook-img > .delete_icon{
+.singlebook-img  .delete_icon{
     width: 40%;
     position: absolute;
-    left:68%;
+    left: 68%;
     top: -8%;
     background-color: lightblue;
     border-radius: 30%;
     display: none;
 }
 
-.singlebook-img:hover > .delete_icon{
+.singlebook-img:hover  .delete_icon{
     display: block;
 }

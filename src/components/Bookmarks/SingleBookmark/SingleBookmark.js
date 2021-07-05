@@ -28,7 +28,7 @@ function SingleBookmark({ name, url, id, uid, count }) {
 
     return (
         <div className="singleBookmark">
-            <a onClick={updateVisitCount}  href={url} target="_blank" rel="noreferrer" className="singleBookmarkContainer">
+            <a onClick={updateVisitCount} href={url} target="_blank" rel="noreferrer" className="singleBookmarkContainer">
                 <div className="singlebook-img">
                     <h1>{firstLetter(name)}</h1>
                     <div onClick={deleteBookmark} className="delete_icon">
@@ -36,13 +36,9 @@ function SingleBookmark({ name, url, id, uid, count }) {
                     </div>
                 </div>
                 <p>{name}</p>
-            </a>
-           
-            
+            </a>            
         </div>
     )
 }
 
 export default SingleBookmark
-
-// change delete button to trash icon
