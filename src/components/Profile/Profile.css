@@ -4,9 +4,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #333333;
+    color: #fff;
 }
 
 .profile > h1 {
+    margin-bottom: 2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 }
 
@@ -15,8 +19,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: aquamarine;
-    padding: 2rem;
+    padding: 3rem;
+    border: 1px solid #000;
+    box-shadow: 16px 16px 32px rgba(0,0,0,0.25),-16px -16px 32px rgba(0,0,0,0.25);
+    
 }
 
 .profile_header {
@@ -24,11 +30,42 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 1.5rem;
 }
 
+.profile_header > img {
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
 .profile-name, .profile-email {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    padding: 1rem;
+}
+
+.profile-name > h4, .profile-email > h4 {
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.profile-name > h3, .profile-email > h3 {
+    border: 1px solid #fff;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.profile_options > button {
+    border-radius: 30px;
+    background-color: #191919;
+    color: #fff;
+    padding: 1rem;
+}
+
+.profile_options > button:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }

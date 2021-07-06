@@ -165,7 +165,7 @@ export default function Bookmarks() {
                         <h3>Sort by</h3>
 
                         <div className="sort-btns">
-                            <button onClick={handleMostVisited} className="mostVisisted-btn" style={{ boxShadow: sortId === 1 ? '5px 5px 10px #000000a0, -5px -5px 10px #ffffff40' : 'none'}}>Most Visited</button>
+                            <button onClick={handleMostVisited}  className="mostVisisted-btn" style={{ boxShadow: sortId === 1 ? '5px 5px 10px #000000a0, -5px -5px 10px #ffffff40' : 'none'}}>Most Visited</button>
                             <button onClick={handleAlphabetical} className="alphabetical-btn" style={{ boxShadow: sortId === 2 ? '5px 5px 10px #000000a0, -5px -5px 10px #ffffff40' : 'none'}}>Alphabetical</button>
                         </div>
                     </div>
@@ -199,7 +199,7 @@ export default function Bookmarks() {
                     Add Bookmark
                 </DialogTitle>
                 <DialogContent dividers>
-                <div>
+                <div classname="bookmark-details">
                     <div className="name-label">
                         <label>
                             Website Name:

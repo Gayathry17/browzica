@@ -24,12 +24,12 @@ function Profile() {
             <div className="profileContainer">
                 <div className="profile_header">
                     <img src={currentUser.photoURL} alt="" />
-                    <div className="profile-name">
-                        <h4>Email</h4>
+                    <div className="profile-email">
+                        <h4>Email:</h4>
                         <h3>{currentUser.email}</h3>
                     </div>
-                    <div className="profile-email">
-                        <h4>Name</h4>
+                    <div className="profile-name">
+                        <h4>Name:</h4>
                         <h3>{currentUser.displayName}</h3>
                     </div>
                 </div>

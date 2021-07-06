@@ -14,6 +14,7 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    border-radius: 20px;
    
 }
 
@@ -43,10 +44,10 @@
 
 
 .singlebook-img  .delete_icon{
-    width: 40%;
+    width: 30%;
     position: absolute;
-    left: 68%;
-    top: -8%;
+    left: 80%;
+    top: -10%;
     background-color: lightblue;
     border-radius: 30%;
     display: none;
