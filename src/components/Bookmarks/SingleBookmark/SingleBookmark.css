@@ -4,7 +4,8 @@
     align-items: center;
     justify-content: center;
     margin: 10px;
-    width: 130px;
+    width: 110px;
+    position: relative;
 
 }
 
@@ -21,16 +22,16 @@
 .singlebook-img {
     width: 78px;
     height: 78px;
-    background-color: #4d4d4d;
+    background-color: #475168;
     border-radius: 20px;
     display: grid;
     place-items: center;
-    position: relative;
-
+    transition: all 0.5s linear;
 }
 
 .singlebook-img > h1 {
     color: #fff;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .singleBookmarkContainer > p {
@@ -39,20 +40,27 @@
     font-size: 1rem;
     display: flex;
     flex-wrap: wrap;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
 }
 
 
 
-.singlebook-img  .delete_icon{
-    width: 30%;
+.singleBookmark  .delete_icon{
+    width: 22%;
     position: absolute;
-    left: 80%;
+    left: 70%;
     top: -10%;
-    background-color: lightblue;
+    background-color: #A2A3B6;
+    transition: all 1s ease;
     border-radius: 30%;
     display: none;
 }
 
-.singlebook-img:hover  .delete_icon{
+.singleBookmark:hover  .delete_icon{
     display: block;
+}
+
+.singlebook-img:hover {
+    background-color: #3b3c55;
 }

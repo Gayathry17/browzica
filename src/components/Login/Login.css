@@ -50,7 +50,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .login-right-content > h1 {
@@ -59,12 +59,20 @@
     margin-top: -1rem;
     font-family: 'Charm', cursive;
     user-select: none;
+    color: #242541;
     -webkit-user-select: none;
 }
 
 .login-right-content > p {
     font-size: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', sans-serif;
+}
+
+.login-right-content > h4 {
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 1.5rem;
+    font-family: 'Nunito', sans-serif;
 }
 
 .login-rightcontainer > img {
@@ -74,10 +82,11 @@
 .login-rightcontainer > button {    
     border: none;
     border-radius: 30px;
-    box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .25), -1px -1px 2px rgba(0, 0, 0, .25);
     color: #2c2c2c;
     font-size: 16px;
     font-weight: 500;
+    font-family: 'Nunito', sans-serif;
     background-color: rgb(236, 232, 232);
     background-repeat: no-repeat;
     background-position: 12px 11px;

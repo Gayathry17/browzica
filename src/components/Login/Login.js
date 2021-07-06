@@ -45,13 +45,13 @@ function Login() {
             <div className="login-container">
                     <div className="login-leftcontainer">
                         <img src={loginImg} alt=""/>
-                        <p>This is just a paragraphThis is just a paragraph. This is just a paragraph</p>
+                        <p>This is just a paragraph This is just a paragraph. This is just a paragraph</p>
                     </div>
                     <div className="login-rightcontainer">
                         <div className="login-right-content">
                             <p>Welcome to</p>
                             <h1>Browzica</h1>
-                            <h4>Manage all your bookmarks easily! <br /> Sign in now</h4>
+                            <h4>Manage all your bookmarks easily!</h4>
                         </div>
                         <img src={loginImg} alt=""/>
                         <button onClick={handleOnClick}>

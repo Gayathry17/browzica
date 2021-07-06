@@ -28,12 +28,12 @@ function SingleBookmark({ name, url, id, uid, count }) {
 
     return (
         <div className="singleBookmark">
+            <div onClick={deleteBookmark} className="delete_icon">
+                <img src={deleteImg} alt=""/>
+            </div>
             <a onClick={updateVisitCount} href={url} target="_blank" rel="noreferrer" className="singleBookmarkContainer">
                 <div className="singlebook-img">
                     <h1>{firstLetter(name)}</h1>
-                    <div onClick={deleteBookmark} className="delete_icon">
-                        <img src={deleteImg} alt=""/>
-                    </div>
                 </div>
                 <p>{name}</p>
             </a>            

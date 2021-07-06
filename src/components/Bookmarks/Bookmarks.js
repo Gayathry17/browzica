@@ -216,8 +216,8 @@ export default function Bookmarks() {
                 </DialogContent>
                 <DialogActions>
                     <div className="modal-buttons">
-                        <Button variant="contained" color="primary" onClick={createBookmark}>Save</Button>
-                        <Button variant="contained" onClick={handleClose}>Cancel</Button>
+                        <button  onClick={handleClose} className="cancel-button">Cancel</button>
+                        <button  onClick={createBookmark} className="save-button">Save</button>
                     </div>
                 </DialogActions>
             </Dialog>         

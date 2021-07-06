@@ -10,7 +10,7 @@
 
 .profile > h1 {
     margin-bottom: 2rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Nunito', sans-serif;
 
 }
 
@@ -47,23 +47,23 @@
 
 .profile-name > h4, .profile-email > h4 {
     font-size: 1rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 .profile-name > h3, .profile-email > h3 {
-    border: 1px solid #fff;
+    border: 1px solid #000;
     margin-left: 1rem;
     padding: 0.5rem;
     width: 100%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 
 .profile_options > button {
     border-radius: 30px;
-    background-color: #191919;
+    background-color: #404040;
     color: #fff;
-    padding: 1rem;
+    padding: 0.7rem 1.2rem;
 }
 
 .profile_options > button:hover {
