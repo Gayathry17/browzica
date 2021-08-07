@@ -97,25 +97,25 @@
 }
 
 .name-label {
-    padding: 1rem;
+    padding: 0.5rem;
     width: 94%;
     font-size: 1rem;
     font-family: 'Nunito', sans-serif;
 }
 
 .name-label input {
-   margin-left: 0.5rem;
+   width: 100%;
 }
 
 .url-label {
-    padding: 1rem;
+    padding: 0.5rem;
     width: 94%;
     font-size: 1rem;
     font-family: 'Nunito', sans-serif;
 }
 
 .url-label input {
-    margin-left: 0.5rem;
+    width: 100%;
 }
 
 
@@ -147,3 +147,58 @@
     font-size: 1rem;
 }
 
+@media (min-width: 992px) and (max-width: 1380px) {
+    .bookmark-container {
+        padding: 1.5rem;
+    }
+    
+    .search-sort {
+        width: 100%;
+    }
+    
+    .sort-btns {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sort-btns > button {
+        margin-bottom: 5px;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    .search-sort {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .bookmark-search {
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .bookmark-container {
+        padding: 1.5rem;
+    }
+
+    .sort-btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sort-btns > button {
+        margin-bottom: 5px;
+    }
+
+    .bookmark-body {
+        width: 100%;
+    }
+}

@@ -9,12 +9,14 @@ import { withStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import AddIcon from '@material-ui/icons/Add';
 
+
 import SingleBookmark from './SingleBookmark/SingleBookmark';
 
 import { AuthContext } from '../../context/AuthContext'
 import { db } from '../../firebase/firebase';
 
 import './BookMarks.css'
+import Footer from '../Footer/Footer';
 
 
 
@@ -192,6 +194,7 @@ export default function Bookmarks() {
                         }
                     </Grid>
                 </div>
+                <Footer />
             </div>
 
             <Dialog disableScrollLock onClose={handleClose} aria-labelledby="simple-dialog-title" open={open} className="bookmark-dialog">
