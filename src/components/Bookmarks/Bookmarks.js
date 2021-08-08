@@ -109,6 +109,9 @@ export default function Bookmarks() {
         }
     }, [currentUser.uid, sortId])
 
+    
+    const primaryColors = ['#66ff99', '#66ffff', '#cc99ff', '#ff66cc', '#ff9966', '#77ff33', '#ff7733', '#00ffcc', '#ff1ab3', '#669999', '#ffff00', '#33ff33']
+    const indexCol = Math.floor(Math.random() * primaryColors.length)
 
 
     const handleOpen = () => {
@@ -125,10 +128,14 @@ export default function Bookmarks() {
                 bName: name,
                 bUrl: url,
                 createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-                count: 0
+                count: 0,
+                color: primaryColors[indexCol]
             })
 
         }
+        setOpen(false);
+        setName('')
+        setUrl('')
 
     }
 
@@ -191,6 +198,7 @@ export default function Bookmarks() {
                                     id={bookmark.id}
                                     uid={currentUser.uid}
                                     count={bookmark.data.count}
+                                    color={bookmark.data.color}
                                 />
                             ))
                         }

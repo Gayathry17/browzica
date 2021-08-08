@@ -4,8 +4,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #333333;
+    background-color: #26202D;
     color: #fff;
+    overflow: hidden;
 }
 
 .profile-backarrow {
@@ -27,10 +28,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 3rem;
-    border: 1px solid #000;
-    box-shadow: 16px 16px 32px rgba(0,0,0,0.25),-16px -16px 32px rgba(0,0,0,0.25);
-    
+    padding: 1.25rem;
+    width: 30%;
+    height: 50%;
+    border-radius: 15px;
+    box-shadow: 16px 16px 32px rgba(0,0,0,0.25),-16px -16px 32px rgba(0,0,0,0.25);  
 }
 
 .profile_header {
@@ -50,17 +52,17 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 1rem;
+    padding: 0 1rem;
 }
 
 .profile-name > h4, .profile-email > h4 {
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-family: 'Nunito', sans-serif;
 }
 
 .profile-name > h3, .profile-email > h3 {
-    border: 1px solid #000;
     margin-left: 1rem;
+    font-size: 1.35rem;
     padding: 0.5rem;
     width: 100%;
     font-family: 'Nunito', sans-serif;
@@ -69,22 +71,65 @@
 
 .profile_options > button {
     border-radius: 30px;
-    background-color: #404040;
+    background-color: #62547031;
     color: #fff;
-    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.7rem 1.64rem;
+    text-transform: inherit;
 }
 
 .profile_options > button:hover {
     box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-
-@media screen and (max-width: 600px) {
-   .profile{
-       background-size: contain;
-   }
+@media (min-width: 992px) and (max-width: 1380px) {
     .profileContainer {
-        width: 100%;
-        padding: 1rem;
+        padding: 1.25rem;
+        width: 40%;
+        height: 50%; 
     }
 }
+
+
+@media screen and (max-width: 992px) {
+    .profileContainer {
+        width: 60%;
+        height: 50%; 
+    }
+    .profile_header {
+        padding: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .profileContainer {
+        padding: 0.25rem;
+        width: 90%;
+        height: 55%; 
+    }
+    .profile-name, .profile-email {
+        padding: 0rem;
+    }
+    .profile-name > h4, .profile-email > h4 {
+        font-size: 0.95rem;
+    }
+    
+    .profile-name > h3, .profile-email > h3 {
+        margin-left: 0.75rem;
+        font-size: 1.05rem;
+        padding: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .profile{
+        background-size: contain;
+    }
+ }
+
+@media screen and (max-width: 400px) {
+
+}
+
+
