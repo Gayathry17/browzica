@@ -8,6 +8,14 @@
     color: #fff;
 }
 
+.profile-backarrow {
+    font-size: 3rem !important;
+    color: #fff;
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
+}
+
 .profile > h1 {
     margin-bottom: 2rem;
     font-family: 'Nunito', sans-serif;
@@ -68,4 +76,15 @@
 
 .profile_options > button:hover {
     box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+
+@media screen and (max-width: 600px) {
+   .profile{
+       background-size: contain;
+   }
+    .profileContainer {
+        width: 100%;
+        padding: 1rem;
+    }
 }

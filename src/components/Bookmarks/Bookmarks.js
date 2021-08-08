@@ -17,6 +17,7 @@ import { db } from '../../firebase/firebase';
 
 import './BookMarks.css'
 import Footer from '../Footer/Footer';
+import Navbar from '../Navbar/Navbar';
 
 
 
@@ -156,6 +157,7 @@ export default function Bookmarks() {
 
     return (
         <div className="bookmark">
+            <Navbar />
             <div className="bookmark-container">
                 <h2>Bookmarks</h2>
                 <div className="search-sort">

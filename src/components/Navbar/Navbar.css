@@ -1,0 +1,26 @@
+.navbar {
+    height: 80px;
+    width: 100%;
+    background-color: #686868;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+
+.navimg-container >img{
+    width: 40px;
+    position: absolute;
+    top: 9px;
+    left: 52px;
+}
+
+.nav-icon {
+    font-size: 2.5rem !important;
+    color: #000;
+    position: absolute;
+    right: 10px;
+    top: 22px;
+}

@@ -47,7 +47,7 @@
 
 
 .singleBookmark  .delete_icon{
-    width: 22%;
+    width: 20%;
     position: absolute;
     left: 70%;
     top: -10%;
@@ -55,6 +55,7 @@
     transition: all 1s ease;
     border-radius: 30%;
     display: none;
+    padding: 3px;
 }
 
 .singleBookmark:hover  .delete_icon{
