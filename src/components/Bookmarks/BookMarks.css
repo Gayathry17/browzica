@@ -79,7 +79,7 @@
     cursor: pointer;
     font-size: 1rem;
     font-weight: 600;
-    color: #9151D0;
+    color: #fff;
     font-family: 'Nunito', sans-serif;
     background-color: #26202D;
     white-space: nowrap;
@@ -94,34 +94,63 @@
     justify-content: center;
 }
 
+
 .bookmark-body > button{
     margin-left: 20px;
+}
+
+.bookmark-body .MuiButton-root {
+    width: 80px;
+    display: grid;
+    height: 92px;
+    background-color: #bf9be4;
+    padding: 0.7rem 0.7rem;
+    border-radius: 10px;
 }
 
 .bookmark-details{
     padding: 2rem;
 }
 
+.MuiDialog-paper {
+    width: 500px !important;
+    background-color: #e6b3ff!important;
+}
+
+.MuiTypography-h6 {
+    font-size: 1.50rem !important;
+}
+
 .name-label {
     padding: 0.5rem;
     width: 94%;
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-family: 'Nunito', sans-serif;
 }
 
 .name-label input {
    width: 100%;
+   padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #f7e6ff;
 }
 
 .url-label {
     padding: 0.5rem;
     width: 94%;
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-family: 'Nunito', sans-serif;
 }
 
 .url-label input {
     width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #f7e6ff;
 }
 
 
@@ -141,6 +170,7 @@
     background-color: #e6e6e6;
     cursor: pointer;
     font-size: 1rem;
+    width: 85px;
 }
 
 .modal-buttons .save-button {
@@ -151,6 +181,7 @@
     background-color: #006bb3;
     cursor: pointer;
     font-size: 1rem;
+    width: 85px;
 }
 
 @media (min-width: 992px) and (max-width: 1380px) {
@@ -185,12 +216,16 @@
     }
 
     .bookmark-search {
-        width: 90%;
+        width: 97%;
     }
 }
 
 
 @media screen and (max-width: 600px) {
+
+    .bookmark {
+        background-size: cover;
+    }
     .bookmark-container {
         padding: 1.5rem;
     }

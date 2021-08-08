@@ -110,7 +110,7 @@ export default function Bookmarks() {
     }, [currentUser.uid, sortId])
 
     
-    const primaryColors = ['#66ff99', '#66ffff', '#cc99ff', '#ff66cc', '#ff9966', '#77ff33', '#ff7733', '#00ffcc', '#ff1ab3', '#669999', '#ffff00', '#33ff33']
+    const primaryColors = ['#f6bcf6', '#f3a5f3', '#ee82ee', '#ea62ea', '#cc00cc', '#ff33ff', '#bf40bf', '#d279d2', '#b300b3', '#cc6699', '#bf4080', '#d279a6']
     const indexCol = Math.floor(Math.random() * primaryColors.length)
 
 
@@ -184,7 +184,7 @@ export default function Bookmarks() {
                 
                 <div className="bookmark-body">
                     <Grid container>
-                        <Button onClick={handleOpen}>
+                        <Button onClick={handleOpen} className="add-button">
                             <AddIcon/>
                             Add
                         </Button>
