@@ -16,3 +16,18 @@
 <br><br><br><br>
 
 <img alt="browzica" src="./src/assets/images/svg/Made-with-react.svg" />
+
+
+<br><br><br>
+
+## Packages Used &nbsp;&nbsp; :package:
+
+| Client Side Packages  |
+| :-------------: |
+| @material-ui/core  |
+| @material-ui/icons  |
+| react-helmet  |
+| react-icons  |
+| react-reveal |
+| react-router-dom  |
+| firebase  |
