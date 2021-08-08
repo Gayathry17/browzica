@@ -7,7 +7,7 @@ import deleteImg from '../../../assets/images/svg/delete.svg'
 
 import './SingleBookmark.css'
 
-function SingleBookmark({ name, url, id, uid, count }) {
+function SingleBookmark({ name, url, id, uid, count, color }) {
 
     const increment = firebase.firestore.FieldValue.increment(1)
 
@@ -26,13 +26,14 @@ function SingleBookmark({ name, url, id, uid, count }) {
     }
 
 
+
     return (
         <div className="singleBookmark">
             <div onClick={deleteBookmark} className="delete_icon">
                 <img src={deleteImg} alt=""/>
             </div>
             <a onClick={updateVisitCount} href={url} target="_blank" rel="noreferrer" className="singleBookmarkContainer">
-                <div className="singlebook-img">
+                <div className="singlebook-img" style={{backgroundColor: color}}>
                     <h1>{firstLetter(name)}</h1>
                 </div>
                 <p>{name}</p>

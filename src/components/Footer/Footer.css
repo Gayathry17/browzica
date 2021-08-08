@@ -1,10 +1,23 @@
 .footer {
-    height: 50px;
+    height: 60px;
     width: 100%;
-    background-color: #686868;
+    background-color: #26202D;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     bottom: 0%;
+}
+
+.footer > p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.15rem;
+    color: #fff;
+    word-spacing: 4px;
+}
+
+.footer > p > a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #9151D0;
 }

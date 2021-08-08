@@ -3,11 +3,11 @@ import './Footer.css'
 
 function Footer() {
 
-    var year=new Date().getFullYear();
     return (
         <div className="footer">
-            <p>Copyright © {year}</p>
-            
+            <p>
+                Made with <span style={{color: '#9151D0'}}>❤</span> by <a href="https://github.com/Gayathry17" target="_blank" rel="noreferrer">G.S</a>
+            </p>
         </div>
     )
 }
