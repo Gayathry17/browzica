@@ -272,6 +272,10 @@
       max-width: 600px;
       height: 50%;
     }
+
+    .bookmark-sort {
+        padding: 2rem 0;
+    }
 }
 
 

@@ -61,7 +61,6 @@
     position: absolute;
     top: 38px;
     right: 32px;
-
 }
 
 .logo-container > img {
@@ -117,6 +116,7 @@
     width: 50%;
     height: 3rem;
     padding: 0.5rem 1rem;
+    margin-top: 2rem;
 }
 
 .login-rightcontainer > button:hover {
@@ -147,6 +147,9 @@
     .login-right-content{
        padding: 1rem;
     }
+    .login-rightcontainer > button {    
+        width: 65%;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -157,12 +160,21 @@
     .login-leftcontainer {
         display: none;
     }
+    .login-leftcontainer > img {
+        height: auto;
+        width: 100%;
+    }
+    
     .login-rightcontainer {
         flex: 1;
         background-color: #9FAFD5;
     }
+    .login-right-content > h1 {
+        margin-bottom: 0rem;
+    }
     .login-rightcontainer > button {    
         width: 300px;
+        margin-top: 0;
     }
     .login-rightcontainer > img {
         display: block;
@@ -171,6 +183,7 @@
 
     .login-right-content {
         padding: 1.5rem;
+        padding-bottom: 0;
     }
     
 }
@@ -183,6 +196,9 @@
         position: absolute;
         top: 28px;
         right: 28px;
+    }
+    .logo-container > img {
+        width: 40px;
     }
 }
 

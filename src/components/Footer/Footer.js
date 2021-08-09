@@ -6,7 +6,7 @@ function Footer() {
     return (
         <div className="footer">
             <p>
-                Made with <span style={{color: '#9151D0'}}>❤</span>
+                Made with <span style={{color: '#9151D0'}}>❤</span> by G.S
             </p>
         </div>
     )

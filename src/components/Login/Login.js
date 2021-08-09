@@ -53,7 +53,7 @@ function Login() {
                         <p>Tired of having to search for all your favourite websites? Look no further!<br/>Use browzica to keep track of your bookmarks</p>
                     </div>
                     <div className="login-rightcontainer">
-                    <div className="logo-container">
+                        <div className="logo-container">
                             <img src={logoNoText} alt=""/>
                         </div>
                         <div className="login-right-content">
