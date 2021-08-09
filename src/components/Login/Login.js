@@ -58,7 +58,7 @@ function Login() {
                             <h4>Manage all your bookmarks easily!</h4>
                         </div>
                         <img src={loginImg} alt=""/>
-                        <button onClick={handleOnClick}>
+                        <button onClick={handleOnClick} className="sign-in">
                             <img src={googleImage} alt=""/>
                             Sign In with Google
                         </button>
