@@ -41,7 +41,7 @@ const DialogTitle = withStyles(styles)((props) => {
         <Typography variant="h6">{children}</Typography>
         {onClose ? (
         <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
-            <CloseIcon />
+            <CloseIcon style={{color: '#26202D'}}/>
         </IconButton>
         ) : null}
     </MuiDialogTitle>
@@ -163,6 +163,8 @@ export default function Bookmarks() {
 
 
     return (
+        <>
+
         <div className="bookmark">
             <Navbar />
             <div className="bookmark-container">
@@ -184,10 +186,10 @@ export default function Bookmarks() {
                 
                 <div className="bookmark-body">
                     <Grid container>
-                        <Button onClick={handleOpen} className="add-button">
-                            <AddIcon/>
+                        <button onClick={handleOpen} className="add-button">
                             Add
-                        </Button>
+                            <AddIcon/>
+                        </button>
                         
                         {
                             filteredBookmarks && filteredBookmarks.map(bookmark => (
@@ -204,26 +206,25 @@ export default function Bookmarks() {
                         }
                     </Grid>
                 </div>
-                <Footer />
             </div>
 
             <Dialog disableScrollLock onClose={handleClose} aria-labelledby="simple-dialog-title" open={open} className="bookmark-dialog">
                 <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-                    Add Bookmark
+                    <h3 className="dialog-title">Add Bookmark</h3>
                 </DialogTitle>
-                <DialogContent dividers>
-                <div classname="bookmark-details">
+                <DialogContent>
+                <div className="bookmark-details">
                     <div className="name-label">
                         <label>
-                            Website Name:
+                            NAME:
                         </label>
-                        <input type="text" name="Website Name" value={name}  onChange={(e)=>setName(e.target.value)}/>
+                        <input type="text" name="Name" value={name}  onChange={(e)=>setName(e.target.value)}/>
                     </div>
                     <div className="url-label">
                         <label>
-                            Website Url:
+                            URL:
                         </label>
-                        <input type="text" name="Website Url" value={url} onChange={(e)=>setUrl(e.target.value)}/>
+                        <input type="text" name="Url" value={url} onChange={(e)=>setUrl(e.target.value)}/>
                     </div>
                 </div>
                 </DialogContent>
@@ -234,8 +235,9 @@ export default function Bookmarks() {
                     </div>
                 </DialogActions>
             </Dialog>         
-            
         </div>
+        <Footer />
+        </>
     )
 }
 

@@ -4,6 +4,7 @@ import firebase from 'firebase'
 import { db } from '../../../firebase/firebase';
 
 import deleteImg from '../../../assets/images/svg/delete.svg'
+import close from '../../../assets/images/svg/close.svg'
 
 import './SingleBookmark.css'
 
@@ -30,7 +31,7 @@ function SingleBookmark({ name, url, id, uid, count, color }) {
     return (
         <div className="singleBookmark">
             <div onClick={deleteBookmark} className="delete_icon">
-                <img src={deleteImg} alt=""/>
+                <img src={close} alt=""/>
             </div>
             <a onClick={updateVisitCount} href={url} target="_blank" rel="noreferrer" className="singleBookmarkContainer">
                 <div className="singlebook-img" style={{backgroundColor: color}}>
