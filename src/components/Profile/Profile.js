@@ -6,10 +6,11 @@ import { AuthContext } from '../../context/AuthContext'
 import './Profile.css';
 import { Link } from 'react-router-dom';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 function Profile() {
 
-    const { currentUser } = useContext(AuthContext)
+    const { currentUser, handleLogout } = useContext(AuthContext)
 
     const deleteAccount = () => {
         const user = firebase.auth().currentUser;
@@ -21,11 +22,16 @@ function Profile() {
     }
 
 
+
     return (
         <div className="profile">
             <Link to="/">
                 <ArrowBackIcon className="profile-backarrow"/>
             </Link>
+            <div className="logout" onClick={handleLogout}>
+                <h4>Logout</h4>
+                <ExitToAppIcon className="logout-icon"/>
+            </div>
             <h1>My Profile</h1>
             <Fade bottom>
                 <div className="profileContainer">

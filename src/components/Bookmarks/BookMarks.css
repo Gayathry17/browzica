@@ -300,4 +300,9 @@
     .bookmark-body {
         width: 100%;
     }
+
+    .MuiGrid-container{
+        display: flex;
+        justify-content: space-evenly;
+    }
 }

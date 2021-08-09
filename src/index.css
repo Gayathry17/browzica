@@ -10,3 +10,26 @@
   margin: 0;
 }
   
+html {
+  scroll-behavior: smooth;
+}
+
+
+html {
+  --scrollbarBG: #1a001a;
+  --thumbBG: #5a2f77;
+  --gradBG: #947fda;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body {
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(var(--thumbBG), var(--gradBG));
+  /* background-color: var(--thumbBG) ; */
+}

@@ -6,7 +6,8 @@ import { AuthContext } from '../../context/AuthContext'
 import { auth, db } from '../../firebase/firebase';
 
 import loginImg from '../../assets/images/svg/login.svg'
-import googleImage from '../../assets/images/svg/google.svg'
+import googleImage from '../../assets/images/svg/google1.svg'
+import logoNoText from '../../assets/images/svg/logo-notext.svg';
 
 import './Login.css'
 
@@ -45,12 +46,15 @@ function Login() {
             <div className="login-container">
                     <div className="login-leftcontainer">
                         <img src={loginImg} alt=""/>
-                        <p>This is just a paragraph This is just a paragraph. This is just a paragraph</p>
+                        <p>Tired of having to search for all your favourite websites? Look no further!<br/>Use browzica to keep track of your bookmarks</p>
                     </div>
                     <div className="login-rightcontainer">
+                    <div className="logo-container">
+                            <img src={logoNoText} alt=""/>
+                        </div>
                         <div className="login-right-content">
                             <p>Welcome to</p>
-                            <h1>Browzica</h1>
+                            <h1>browz<span style={{color: '#9151D0'}}>i</span>ca</h1>
                             <h4>Manage all your bookmarks easily!</h4>
                         </div>
                         <img src={loginImg} alt=""/>

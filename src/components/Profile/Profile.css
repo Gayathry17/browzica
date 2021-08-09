@@ -17,6 +17,28 @@
     top: 1rem;
 }
 
+.logout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    justify-content: space-around;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+}
+
+.logout > h4 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.logout-icon {
+    font-size: 3rem !important;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+}
+
 .profile > h1 {
     margin-bottom: 2rem;
     font-family: 'Nunito', sans-serif;
@@ -125,6 +147,20 @@
 @media screen and (max-width: 600px) {
     .profile{
         background-size: contain;
+    }
+
+    .profile-backarrow{
+        left: 1rem;
+        top: 2rem;
+    }
+
+    .logout > h4 {
+        display: none;
+    }
+
+    .logout-icon{
+        right: 1rem;
+        top: 2rem;
     }
  }
 

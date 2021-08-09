@@ -3,7 +3,6 @@ import firebase from 'firebase'
 
 import { db } from '../../../firebase/firebase';
 
-import deleteImg from '../../../assets/images/svg/delete.svg'
 import close from '../../../assets/images/svg/close.svg'
 
 import './SingleBookmark.css'

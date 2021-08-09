@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 import './Navbar.css';
 
-import logo from '../../assets/images/svg/logo.svg';
 import logoNoText from '../../assets/images/svg/logo-notext.svg';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
