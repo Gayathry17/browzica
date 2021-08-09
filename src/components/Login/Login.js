@@ -1,6 +1,7 @@
 import React, { useContext} from 'react';
 import firebase from 'firebase';
 import {useHistory} from 'react-router-dom';
+import Helmet from 'react-helmet'
 
 import { AuthContext } from '../../context/AuthContext'
 import { auth, db } from '../../firebase/firebase';
@@ -43,6 +44,9 @@ function Login() {
    
     return (
         <div className="login">
+            <Helmet>
+                <title>Browzica | Login</title>
+            </Helmet>
             <div className="login-container">
                     <div className="login-leftcontainer">
                         <img src={loginImg} alt=""/>

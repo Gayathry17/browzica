@@ -2,8 +2,11 @@ import React, { useContext} from 'react';
 import firebase from 'firebase';
 import Fade from 'react-reveal/Fade';
 import { Button } from '@material-ui/core'
-import { AuthContext } from '../../context/AuthContext'  
+import { AuthContext } from '../../context/AuthContext';
+import Helmet from 'react-helmet'
+
 import './Profile.css';
+
 import { Link } from 'react-router-dom';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
@@ -25,6 +28,9 @@ function Profile() {
 
     return (
         <div className="profile">
+            <Helmet>
+                <title>Browzica | Profile</title>
+            </Helmet>
             <Link to="/">
                 <ArrowBackIcon className="profile-backarrow"/>
             </Link>

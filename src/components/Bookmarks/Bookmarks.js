@@ -8,6 +8,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import { withStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import AddIcon from '@material-ui/icons/Add';
+import Helmet from 'react-helmet';
 
 
 import SingleBookmark from './SingleBookmark/SingleBookmark';
@@ -164,7 +165,9 @@ export default function Bookmarks() {
 
     return (
         <>
-
+        <Helmet>
+            <title>Browzica | Bookmarks</title>
+        </Helmet>
         <div className="bookmark">
             <Navbar />
             <div className="bookmark-container">
