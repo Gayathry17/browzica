@@ -10,7 +10,7 @@ function Fournotfour() {
     let history = useHistory();
  
     function handleClick1() {
-        history.push("/login");
+        history.push("/");
       }
     return (
         <div className="fnf">
@@ -21,7 +21,7 @@ function Fournotfour() {
             <div className="fnf-description">
                 <h1>404</h1>
                 <h2>UH OH! You're lost.</h2>
-                <Button onClick={handleClick1}>Back to login</Button>
+                <Button onClick={handleClick1}>Back to Home</Button>
             </div>
         </div>
     )
