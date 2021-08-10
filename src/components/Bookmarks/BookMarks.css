@@ -29,7 +29,7 @@
 }
 
 .bookmark-search {
-    background-color: #bf9be4;
+    background-color: #ffccff;
     border-radius: 20px;
     width: 60%;
     height: 50px;
@@ -82,7 +82,6 @@
     color: #fff;
     font-family: 'Nunito', sans-serif;
     background-color: #26202D;
-    box-shadow: 3px 3px 6px #00000059,-3px -3px 6px #efefef60 !important;
     white-space: nowrap;
 }
 
@@ -102,6 +101,7 @@
     border: none;
     outline: none;
     cursor: pointer;
+    color: #26202D;
     width: 78px;
     height: 78px;
     margin-top: 0.75rem;
