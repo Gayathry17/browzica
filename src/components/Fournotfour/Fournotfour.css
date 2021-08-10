@@ -1,5 +1,5 @@
 .fnf {
-    height: 100%;
+    height: 100vh;
     background-color: #f0b6f6;
     display: flex;
     flex-direction: row;

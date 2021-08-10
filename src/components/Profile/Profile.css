@@ -10,11 +10,11 @@
 }
 
 .profile-backarrow {
-    font-size: 3rem !important;
+    font-size: 2rem !important;
     color: #fff;
     position: absolute;
     left: 2rem;
-    top: 1rem;
+    top: 2rem;
 }
 
 .logout {
@@ -34,7 +34,8 @@
 }
 
 .logout-icon {
-    font-size: 3rem !important;
+    font-size: 2rem !important;
+    margin-left: 1.05rem;
     color: #fff;
     font-family: 'Nunito', sans-serif;
 }
