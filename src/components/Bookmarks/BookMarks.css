@@ -82,6 +82,7 @@
     color: #fff;
     font-family: 'Nunito', sans-serif;
     background-color: #26202D;
+    box-shadow: 3px 3px 6px #00000059,-3px -3px 6px #efefef60 !important;
     white-space: nowrap;
 }
 
@@ -111,7 +112,8 @@
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    background-color: #ebc6d9;
+    background-color: #ba87dd;
+    box-shadow: 3px 3px 6px #00000059,-3px -3px 6px #efefef60;
     margin: 10px 26px;
 }
 

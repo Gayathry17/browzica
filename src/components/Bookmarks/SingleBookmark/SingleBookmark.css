@@ -25,6 +25,7 @@
     border-radius: 20px;
     display: grid;
     place-items: center;
+    box-shadow: 3px 3px 6px #00000059,-3px -3px 6px #efefef60;
     transition: all 0.5s linear;
 }
 

@@ -95,6 +95,7 @@
 .profile_options > button {
     border-radius: 30px;
     background-color: #62547031;
+    box-shadow: 3px 3px 6px #00000059,-3px -3px 6px #00000059;
     color: #808080;
     font-size: 1rem;
     font-weight: 600;
