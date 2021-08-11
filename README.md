@@ -13,6 +13,7 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/Gayathry17/browzica?color=ff69b4&style=flatsquare)](https://github.com/Gayathry17/browzica/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/Gayathry17/browzica?color=blueviolet&style=flatsquare)](https://github.com/Gayathry17/browzica/network)
+![GitHub](https://img.shields.io/github/license/Gayathry17/browzica)
 
 
 
