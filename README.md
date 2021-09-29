@@ -36,3 +36,32 @@
 <br><br><br>
 
 <img alt="browzica" src="./src/assets/images/svg/Made-with-react.svg" />
+
+<br><br><br>
+
+## Cloning and Running the Application 
+
+- Fork this project
+
+- Clone the project into your local machine
+
+```bash
+git clone https://github.com/<YOUR USERNAME>/browzica.git
+```
+
+```bash
+cd browzica
+```
+- Install all the npm packages. Go into the project folder and type the following command to install all npm packages
+
+```bash
+npm install
+```
+
+- In order to run the application Type the following command
+
+```bash
+npm start
+```
+
+- The Application Runs on **localhost:3000**
