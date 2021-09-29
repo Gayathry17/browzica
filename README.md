@@ -33,9 +33,7 @@
 | firebase  |
 
 
-<br><br><br>
 
-<img alt="browzica" src="./src/assets/images/svg/Made-with-react.svg" />
 
 <br><br><br>
 
@@ -65,3 +63,7 @@ npm start
 ```
 
 - The Application Runs on **localhost:3000**
+
+<br><br><br>
+
+<img alt="browzica" src="./src/assets/images/svg/Made-with-react.svg" />
