@@ -18,7 +18,34 @@
 
 
 
-<br><br><br>
+<br><br>
+
+# Getting Started
+### Clone the repo
+
+
+```
+git clone https://github.com/Gayathry17/browzica.git
+cd browzica
+```
+### Install packages
+```
+npm install
+```
+#### or
+```
+yarn install
+```
+### Start the development server
+```
+npm start
+```
+#### or
+```
+yarn start
+
+```
+<br>
 
 ## Packages Used &nbsp;&nbsp; :package:
 
